@@ -58,6 +58,28 @@
 </body>
 
 <script>
+    const mousePosition = { x: 0, y: 0};
+    let drawID;
+    function getRandomNumber(min, max){
+        return Math.round(Math.random()*(max - min +1))+min;
+    };
+    window.addEventListener('mousemove', function(mouseMoveEvent){
+        mousePosition.x = mouseMoveEvent.pageX;
+        mousePosition.y = mouseMoveEvent.pageY;
+    });
+    function draw(){
+        return setInterval(function(){
+            const container = document.getElementById("wrap");
+            const color = 'background:rgb( ${getRandomNumber(0, 225)}, ${getRandomNumber(
+                0,
+                255
+                )}, ${getRandomNumber(0, 225)});';
+                
+            
+        })
+    }
+        
+   
 
 </script>
 
